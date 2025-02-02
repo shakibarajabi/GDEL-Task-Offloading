@@ -1,0 +1,12 @@
+comparison_algorithms:
+- Random Scheduling
+- Local Computing
+- DQN
+- A3C
+- Proposed Algorithm
+metrics:
+- task_completion_time
+- energy_consumption
+- offloading_decision_latency
+result_directory: results/
+save_results: true

@@ -1,0 +1,10 @@
+interference_range:
+- 5
+- 20
+max_bandwidth: 100
+min_bandwidth: 10
+num_edge_nodes: 50
+num_users: 500
+simulation_time: 3600
+task_arrival_rate: 0.2
+task_size_distribution: normal

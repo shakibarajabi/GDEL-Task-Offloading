@@ -1,0 +1,5 @@
+{
+    "train_data": "data/train_data.csv",
+    "test_data": "data/test_data.csv",
+    "processed_data": "data/processed/"
+}
