@@ -1,62 +1,89 @@
-GDEL: GEO-DISTRIBUTED EDGE LAYERING FOR TASK OFFLOADING
+# GDEL Task Offloading with DDQN
 
-A Mobility-Aware MEC Simulation with DDQN-Based Task Offloading
+## Overview
+This repository provides the implementation of **Geo-Distributed Edge Layering (GDEL)** for **task offloading in a Mobile Edge Computing (MEC) environment**. The proposed system integrates **Double Deep Q-Networks (DDQN)** to optimize task allocation decisions based on network conditions, user mobility, and resource availability.
 
-This repository contains the GDEL (Geo-Distributed Edge Layering) framework, a reinforcement learning-driven task offloading model designed for Mobile Edge Computing (MEC) environments. The system optimizes task offloading, resource allocation, and network efficiency while considering user mobility, interference, and network conditions.
+## Features
+- **System Simulation**: Implements an MEC environment with network topology, bandwidth allocation, and interference modeling.
+- **Task Offloading via DDQN**: Uses reinforcement learning to optimize task scheduling.
+- **Resource Allocation**: Dynamically manages edge resources based on real-time demand.
+- **Mobility Model**: Simulates user mobility patterns affecting network performance.
+- **Performance Analysis**: Includes comparison metrics such as task completion time, energy consumption, and network efficiency.
 
-📌 FEATURES
-•	Task Offloading Model: Uses MDP and DDQN for intelligent decision-making
-Geo-Distributed Edge Layering (GDEL): GAONs (Geo-Aware Offloading Nodes) and ROHs (Regional Offloading Hubs) dynamically allocate computing resources
+## Repository Structure
+```
+GDEL-Task-Offloading/
+│── README.md                # Instructions on using the repo
+│── installation.md           # Dependencies and setup guide
+│── requirements.txt          # Python dependencies
+│── .gitignore                # Ignore unnecessary files
+│── notebooks/                # Jupyter Notebooks
+│   ├── environment.ipynb
+│   ├── system_model.ipynb
+│   ├── network_topology.ipynb
+│   ├── mobility_model.ipynb
+│   ├── resource_allocation.ipynb
+│   ├── performance_analysis.ipynb
+│   ├── train_ddqn.ipynb
+│── data/                     # CSV datasets
+│   ├── task_data.csv
+│   ├── network_conditions.csv
+│   ├── energy_consumption.csv
+│   ├── latency_analysis.csv
+│── scripts/                  # Python scripts for training & evaluation
+│   ├── ddqn_agent.py
+│   ├── environment.py
+│   ├── system_model.py
+│   ├── network_topology.py
+│   ├── mobility_model.py
+│   ├── resource_allocation.py
+│   ├── utils.py
 
-•	Network-Aware Optimization: Factors in bandwidth, interference, latency, and power constraints
+```
 
-•	Mobility Prediction: Uses nonlinear motion models for user position tracking
-Resource Allocation: Dynamically distributes computational load based on network congestion
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone git clone https://github.com/shakibarajabi/GDEL-Task-Offloading/
+   cd GDEL-Task-Offloading
+   ```
 
-•	Performance Evaluation: Includes real-world metrics like task completion time, offloading latency, and energy consumption
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-   
+3. Run Jupyter Notebook:
+   ```bash
+   jupyter notebook
+   ```
 
+## Running the Simulation
+### Step 1: Generate Tasks
+```bash
+python scripts/task_generator.py
+```
 
-🔧 INSTALLATION GUIDE
-1️ CLONE REPOSITORY
+### Step 2: Train the DDQN Model
+```bash
+python scripts/train_ddqn.py
+```
 
-2️ INSTALL DEPENDENCIES
-pip install -r requirements.txt
+### Step 3: Run Performance Analysis
+Open `performance_analysis.ipynb` in Jupyter Notebook and execute all cells.
 
-3️ RUN THE MEC SIMULATION
-To execute the task offloading model:
-python src/train.py
-To analyze performance metrics:
-jupyter notebook notebooks/performance_analysis.ipynb
+## Results and Performance Metrics
+- **Task Completion Time**
+- **Offloading Decision Latency**
+- **Energy Consumption per Task**
+- **Successful Offloading Ratio**
+- **Network Efficiency**
 
+## Contributions
+We welcome contributions to improve this project. To contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit changes (`git commit -m "Added new feature"`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a Pull Request.
 
-📊 PERFORMANCE METRICS
-This repository includes detailed performance evaluation CSV files, stored in the data/ folder:
-1️ TASK COMPLETION TIME
-📄 task_completion_time.csv
-•	Measures the time required to complete tasks of varying sizes across different offloading strategies.
-2️ OFFLOADING DECISION LATENCY
-📄 offloading_latency.csv
-•	Evaluates how quickly the system decides between local processing vs. offloading.
-3️ ENERGY CONSUMPTION PER TASK
-📄 energy_consumption.csv
-•	Tracks power consumption for both local computation and offloading.
-4️ SUCCESSFUL OFFLOADING RATIO
-📄 successful_offloading_ratio.csv
-•	Measures how many tasks were successfully offloaded vs. failed due to congestion or interference.
-5️ NETWORK EFFICIENCY
-📄 network_efficiency.csv
-•	Assesses the data throughput, latency, and bandwidth utilization.
-
- 
-📌 HOW TO CONTRIBUTE
-✅Fork the repository.
-✅ Create a new branch:
-git checkout -b feature-new-feature
-✅ Commit and push your changes.
-✅ Open a Pull Request with a description of your improvements.
-
-📌 Contact: For any questions or collaborations, feel free to reach out at mehdi.hosseinzadeh@mq.edu.au.
-
-![image](https://github.com/user-attachments/assets/97640508-6c3a-49e7-857d-9e0d9e608a90)
