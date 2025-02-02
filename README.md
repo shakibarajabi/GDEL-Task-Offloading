@@ -15,38 +15,7 @@ Resource Allocation: Dynamically distributes computational load based on network
 
 •	Performance Evaluation: Includes real-world metrics like task completion time, offloading latency, and energy consumption
 
-📂 REPOSITORY STRUCTURE
-📂 GDEL-Task-Offloading
-│── 📂 src/                   
-│   ├── environment.py        
-│   ├── system_model.py       
-│   ├── network_topology.py   
-│   ├── mobility_model.py     
-│   ├── resource_allocation.py
-│   ├── ddqn_agent.py         
-│   ├── utils.py              
-│   ├── train.py              
-│   ├── tasks.json            
-│
-│── 📂 notebooks/             
-│   ├── performance_analysis.ipynb  
-│   ├── train_ddqn.ipynb      
-│   ├── tsk-gnr.ipynb         
-│
-│── 📂 data/                  
-│   ├── task_completion_time.csv
-│   ├── offloading_latency.csv
-│   ├── energy_consumption.csv
-│   ├── successful_offloading_ratio.csv
-│   ├── network_efficiency.csv
-│
-│── 📂 docs/                  
-│   ├── README.md             
-│   ├── installation.md       
-│
-│── .gitignore                
-│── requirements.txt          
-│── ddqn_model.h5             
+   
 
 
 🔧 INSTALLATION GUIDE
@@ -60,6 +29,7 @@ To execute the task offloading model:
 python src/train.py
 To analyze performance metrics:
 jupyter notebook notebooks/performance_analysis.ipynb
+
 
 📊 PERFORMANCE METRICS
 This repository includes detailed performance evaluation CSV files, stored in the data/ folder:
