@@ -61,7 +61,7 @@ GDEL-Task-Offloading/
 ## Running the Simulation
 ### Step 1: Generate Tasks
 ```bash
-python scripts/task_generator.py
+python scripts/task_generator.py ( provided in json file )
 ```
 
 ### Step 2: Train the DDQN Model
@@ -72,12 +72,14 @@ python scripts/train_ddqn.py
 ### Step 3: Run Performance Analysis
 Open `performance_analysis.ipynb` in Jupyter Notebook and execute all cells.
 
-## Results and Performance Metrics
+
+## Our Simulation Results and Performance Metrics have uploaded in Data folder, including:
 - **Task Completion Time**
 - **Offloading Decision Latency**
 - **Energy Consumption per Task**
 - **Successful Offloading Ratio**
 - **Network Efficiency**
+- etc...
 
 ## Contributions
 We welcome contributions to improve this project. To contribute:
